@@ -35,6 +35,7 @@ const Index = () => {
       const paymentResult = await paymentResponse.json();
       setResponse(JSON.stringify(paymentResult, null, 2));
     } catch (error) {
+      console.error("Error:", error);
       setResponse(`Error: ${error.message}`);
     }
   };
